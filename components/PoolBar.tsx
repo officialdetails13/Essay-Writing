@@ -8,10 +8,12 @@ export function PoolBar({ pools, compact = false }: { pools: Pools; compact?: bo
     <div className={compact ? "pool compact" : "pool"}>
       <div className="pool-labels">
         <span className="over-text">
-          OVER {formatMultiplier(m.over)} <small>({pools.over.toLocaleString()} pts)</small>
+          OVER {formatMultiplier(m.over)}
+          <small>{pools.over.toLocaleString()} pts</small>
         </span>
-        <span className="under-text">
-          <small>({pools.under.toLocaleString()} pts)</small> {formatMultiplier(m.under)} UNDER
+        <span className="under-text right">
+          {formatMultiplier(m.under)} UNDER
+          <small>{pools.under.toLocaleString()} pts</small>
         </span>
       </div>
       <div className="pool-bar" aria-hidden>

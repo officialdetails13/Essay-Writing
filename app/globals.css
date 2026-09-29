@@ -370,8 +370,17 @@ button:disabled {
 .pool.compact .pool-labels {
   font-size: 0.85rem;
 }
+.pool-labels > span {
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+}
+.pool-labels > .right {
+  align-items: flex-end;
+}
 .pool-labels small {
   font-weight: 400;
+  font-size: 0.78rem;
   color: var(--muted);
 }
 .pool-bar {
@@ -538,6 +547,13 @@ td {
   text-align: left;
   padding: 10px 16px;
   border-top: 1px solid var(--border);
+  white-space: nowrap;
+}
+@media (max-width: 520px) {
+  th,
+  td {
+    padding: 10px 8px;
+  }
 }
 thead th {
   border-top: 0;
